@@ -32,7 +32,7 @@ $produits = $stmt->fetchAll();
   <tbody>
     <?php foreach ($produits as $p): ?>
     <tr>
-      <td><img src="../../<?= $p['image'] ?>" width="60"></td>
+      <td><img src="../<?= $p['image'] ?>" width="60"></td>
       <td><?= $p['nom'] ?></td>
       <td><?= $p['prix'] ?> DT</td>
       <td>

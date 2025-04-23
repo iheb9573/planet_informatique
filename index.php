@@ -53,7 +53,7 @@ $produits = $stmt->fetchAll();
       <?php foreach ($produits as $produit): ?>
       <div class="col">
         <div class="card h-100">
-          <img src="uploads/<?= $produit['image'] ?>" class="card-img-top" alt="<?= htmlspecialchars($produit['nom']) ?>">
+          <img src="<?= $produit['image'] ?>" class="card-img-top" alt="<?= htmlspecialchars($produit['nom']) ?>">
           <div class="card-body">
             <h5 class="card-title"><?= htmlspecialchars($produit['nom']) ?></h5>
             <p class="card-text"><?= htmlspecialchars($produit['description']) ?></p>

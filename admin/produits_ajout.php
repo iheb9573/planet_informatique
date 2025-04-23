@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Gestion image
     $imagePath = '';
     if ($_FILES['image']['name']) {
-        $imgName = uniqid() . '_' . $_FILES['image']['name'];
+        $imgName = basename($_FILES['image']['name']);
         move_uploaded_file($_FILES['image']['tmp_name'], '../../uploads/' . $imgName);
         $imagePath = 'uploads/' . $imgName;
     }

@@ -1,0 +1,153 @@
+/* Variables globales */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --text-color: #2c3e50;
+  --background-light: #f8f9fa;
+  --transition-speed: 0.3s;
+}
+
+/* Styles généraux */
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all var(--transition-speed);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  position: relative;
+  transition: color var(--transition-speed);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--secondary-color);
+  transition: all var(--transition-speed);
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Hero section */
+header.bg-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+header.bg-primary::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  background: white;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: transform var(--transition-speed);
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.card-footer {
+  background: transparent;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+}
+
+.btn-primary {
+  background: var(--secondary-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: all var(--transition-speed);
+}
+
+.btn-primary:hover {
+  background: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Footer */
+footer {
+  background: var(--primary-color) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 150px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  
+  header.bg-primary {
+    padding: 2rem 0;
+  }
+}
