@@ -40,7 +40,7 @@ include_once 'includes/header.php';
         </div>
       </div>
       <div class="carousel-item">
-        <img src="assets/images/banner3.jpg" class="d-block w-100" alt="Services">
+        <img src="assets/images/banner4.png" class="d-block w-100" alt="Services">
         <div class="carousel-caption">
           <h2 class="display-4 fw-bold">Service après-vente</h2>
           <p class="lead">Une équipe d'experts à votre service</p>
