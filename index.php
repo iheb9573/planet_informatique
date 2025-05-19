@@ -16,7 +16,7 @@ include_once 'includes/header.php';
 
 <!-- Hero Section avec Carousel -->
 <div class="hero-section">
-  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" style="max-height: 500px; overflow: hidden;">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
       <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
@@ -32,7 +32,7 @@ include_once 'includes/header.php';
         </div>
       </div>
       <div class="carousel-item">
-        <img src="assets/images/banner2.jpg" class="d-block w-100" alt="Nouveautés">
+        <img src="assets/images/banner5.png" class="d-block w-100" alt="Nouveautés">
         <div class="carousel-caption">
           <h2 class="display-4 fw-bold">Nouveautés 2023</h2>
           <p class="lead">Les dernières innovations technologiques sont arrivées</p>

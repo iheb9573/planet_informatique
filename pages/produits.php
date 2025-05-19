@@ -29,7 +29,7 @@ $produits = $stmt->fetchAll();
             <h5 class="card-title"><?= htmlspecialchars($p['nom']) ?></h5>
             <p class="card-text"><?= substr($p['description'], 0, 100) ?>...</p>
             <p class="fw-bold"><?= $p['prix'] ?> DT</p>
-            <a href="../ajouter_panier.php?id=<?= $p['id'] ?>" class="btn btn-success">Ajouter au Panier</a>
+            <a href="ajouter_panier.php?id=<?= $p['id'] ?>" class="btn btn-success">Ajouter au Panier</a>
           </div>
         </div>
       </div>
