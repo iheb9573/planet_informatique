@@ -40,11 +40,13 @@
         </ul>
         <ul class="navbar-nav">
           <?php if (isset($_SESSION['user_id'])): ?>
+          <?php if (!$_SESSION['is_admin']): ?>
           <li class="nav-item">
             <a class="nav-link" href="<?= $basePath ?? '' ?>pages/panier.php">
               <i class="fas fa-shopping-cart me-1"></i> Panier
             </a>
           </li>
+          <?php endif; ?>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
               <i class="fas fa-user-circle me-1"></i> <?= $_SESSION['nom'] ?? 'Mon compte' ?>
