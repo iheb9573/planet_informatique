@@ -15,6 +15,32 @@ include_once 'includes/header.php';
 ?>
 
 <!-- Hero Section avec Carousel -->
+<style>
+        .carousel-container {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            overflow: hidden;
+        }
+        
+        .carousel-inner {
+            max-height: 80vh;
+        }
+        
+        .carousel-item img {
+            width: 100%;
+            height: 80vh;
+            object-fit: cover;
+        }
+        
+        /* Ajuster le contenu principal pour éviter les chevauchements */
+        .main-content {
+            margin-top: 2rem;
+        }
+    </style>
 <div class="hero-section">
   <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" style="max-height: 500px; overflow: hidden;">
     <div class="carousel-indicators">
